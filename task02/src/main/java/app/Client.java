@@ -14,7 +14,7 @@ public class Client {
     private Float noint = 0.0f;
     private Float average; 
     private String irequest;
-    private boolean sresponse;
+    private boolean sresponse=false;
 
     public Client(){
 
