@@ -12,9 +12,9 @@ import java.util.List;
 
 public class MailMerge {
     
-    private Path tocsv = Paths.get("/Users/ljq/Projects/VISAWORKSHOP/01-sdf-/testfiles","tour_packages.csv");
+    private Path tocsv = Paths.get("tour_packages.csv");
     private File csv = tocsv.toFile();
-    private Path totemplate = Paths.get("/Users/ljq/Projects/VISAWORKSHOP/01-sdf-/testfiles", "tour_packages.txt");
+    private Path totemplate = Paths.get("tour_packages.txt");
     private File template = totemplate.toFile();
     private String templateString;
     private List<String> headerList;
@@ -34,7 +34,6 @@ public class MailMerge {
 
     public void start() throws IOException{
         
-        System.out.println("App started");
         templateString = readTemplateFile(template);
         headerList = readcvs(csv).get(0);
         rows = readcvs(csv).get(1);
